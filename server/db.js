@@ -3,7 +3,13 @@ module.exports = {
   getList: getList
 }
 
-var shoppingList = []
+var shoppingList = [
+  {cat: "bakery", item: "bread"},
+  {cat: "produce", item: "carrot"},
+  {cat: "chilled", item: "prawns"},
+  {cat: "other", item: "chips"},
+
+]
 
 function add (item, cb) {
   shoppingList.push(item)

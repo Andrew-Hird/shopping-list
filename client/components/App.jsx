@@ -26,7 +26,6 @@ export default React.createClass({
   },
 
   renderList(err, list){
-    console.log(list)
     this.setState({
       list: list
     })
@@ -37,7 +36,7 @@ export default React.createClass({
       <div>
         <Header text="What do you want to buy?"/>
         <NewItem add={this.add}/>
-        <ShoppingList allItems={this.state.list} />
+        <ShoppingList className="listHolder" allItems={this.state.list} />
       </div>
     )
   }

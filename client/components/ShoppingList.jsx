@@ -4,7 +4,7 @@ import ShoppingItem from './ShoppingItem'
 export default React.createClass({
   render() {
     return (
-      <div>
+      <div className="listHolder">
         <h2>This is your shopping list!!</h2>
         <ul>
           {this.props.allItems.map((allItems, i) => {

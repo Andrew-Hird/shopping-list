@@ -1,0 +1,22 @@
+.listHolder {
+  width: 70%;
+  height: auto;
+  display: flex;
+  justify-content: space-around;
+}
+
+.bakery {
+
+}
+
+.produce {
+
+}
+
+.chilled {
+
+}
+
+.other {
+  float: right;
+}

@@ -1,22 +1,25 @@
 .listHolder {
-  width: 70%;
-  height: auto;
-  display: flex;
-  justify-content: space-around;
-}
-
-.bakery {
+  width: 50%;
+  margin: 0px auto;
 
 }
 
-.produce {
-
+.new {
+  width: 50%;
+  margin: 0px auto;
+  text-align: center;
 }
 
-.chilled {
-
+.header {
+  width: 50%;
+  margin: 0px auto;
+  text-align: center;
 }
 
-.other {
-  float: right;
+li {
+  text-decoration: none;
+}
+
+h2 {
+  text-align: center;
 }

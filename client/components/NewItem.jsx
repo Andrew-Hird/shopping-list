@@ -18,7 +18,7 @@ export default React.createClass({
 
   render() {
     return (
-      <div>
+      <div className="new">
         <input
           id="new-item"
           name="new-item"

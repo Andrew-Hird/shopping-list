@@ -13,7 +13,6 @@ var shoppingList = [
 
 function add (item, cb) {
   shoppingList.push(item)
-  console.log("db", shoppingList)
   cb()
 }
 

@@ -26,7 +26,10 @@ export default React.createClass({
   },
 
   renderList(err, list){
-    this.setState({ list: list })
+    console.log(list)
+    this.setState({
+      list: list
+    })
   },
 
   render() {
@@ -34,7 +37,7 @@ export default React.createClass({
       <div>
         <Header text="What do you want to buy?"/>
         <NewItem add={this.add}/>
-        <ShoppingList list={this.state.list} />
+        <ShoppingList allItems={this.state.list} />
       </div>
     )
   }

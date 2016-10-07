@@ -7,10 +7,12 @@ export default React.createClass({
       <div>
         <h2>This is your shopping list!!</h2>
         <ul>
-          {this.props.list.map((item) => {
+          {this.props.allItems.map((allItems, i) => {
             return <ShoppingItem
-              item={item} />
-          })}
+              key={i}
+              item={allItems.item}
+              cat={allItems.cat} />
+        })}
         </ul>
       </div>
     )

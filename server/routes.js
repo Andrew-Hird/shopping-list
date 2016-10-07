@@ -6,7 +6,7 @@ module.exports = {
 }
 
 function add (req, res) {
-  db.add(req.body.item, function () {
+  db.add(req.body, function () {
     res.sendStatus(204)
   })
 }

@@ -5,10 +5,10 @@ export default {
   getList: getList
 }
 
-function add(item, cb) {
+function add(itemData, cb) {
   request
   .post('/add')
-  .send({item: item})
+  .send(itemData)
   .end((err, res) => {
     cb(err)
   })

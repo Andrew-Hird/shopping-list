@@ -7,7 +7,7 @@ var shoppingList = []
 
 function add (item, cb) {
   shoppingList.push(item)
-  console.log(shoppingList)
+  console.log("db", shoppingList)
   cb()
 }
 

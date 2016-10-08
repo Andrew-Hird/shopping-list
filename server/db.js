@@ -3,21 +3,33 @@ module.exports = {
   getList: getList
 }
 
-var shoppingList = [
-  {cat: "bakery", item: "bread"},
-  {cat: "produce", item: "carrot"},
-  {cat: "chilled", item: "prawns"},
-  {cat: "other", item: "chips"},
+var shoppingList = []
 
+var list = [
+  ['bread', 'rolls'],
+  ['carrot', 'lettuce'],
+  ['prawns', 'milk'],
+  ['chips', 'crackers']
 ]
 
 function add (item, cb) {
-  shoppingList.push(item)
+  if(item.cat === 'bakery') {
+    list[0].push(item.item)
+  } else if(item.cat === 'produce') {
+    list[1].push(item.item)
+  } else if(item.cat === 'chilled') {
+    list[2].push(item.item)
+  } else if(item.cat === 'other') {
+    list[3].push(item.item)
+  }
+
+
+  console.log(list)
   cb()
 }
 
 function getList () {
   return new Promise(function (resolve) {
-    resolve(shoppingList)
+    resolve(list)
   })
 }

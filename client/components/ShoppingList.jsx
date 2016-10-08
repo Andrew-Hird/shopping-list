@@ -1,19 +1,18 @@
 import React from 'react'
-import ShoppingItem from './ShoppingItem'
+import Bakery from './Bakery'
+import Produce from './Produce'
+import Chilled from './Chilled'
+import Other from './Other'
 
 export default React.createClass({
   render() {
     return (
-      <div className="listHolder">
+      <div>
         <h2>This is your shopping list!!</h2>
-        <ul>
-          {this.props.allItems.map((allItems, i) => {
-            return <ShoppingItem
-              key={i}
-              item={allItems.item}
-              cat={allItems.cat} />
-        })}
-        </ul>
+        <Bakery bakery={this.props.bakery} />
+        <Produce produce={this.props.produce} />
+        <Chilled chilled={this.props.chilled} />
+        <Other other={this.props.other} />
       </div>
     )
   }

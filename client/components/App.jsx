@@ -9,7 +9,11 @@ import NewItem from './NewItem'
 export default React.createClass({
   getInitialState() {
     return {
-      list: []
+      list: [],
+      bakery: [],
+      produce: [],
+      chilled: [],
+      other: []
     }
   },
 
@@ -27,7 +31,10 @@ export default React.createClass({
 
   renderList(err, list){
     this.setState({
-      list: list
+      bakery: list[0],
+      produce: list[1],
+      chilled: list[2],
+      other: list[3]
     })
   },
 
@@ -36,7 +43,11 @@ export default React.createClass({
       <div>
         <Header text="What do you want to buy?"/>
         <NewItem add={this.add}/>
-        <ShoppingList className="listHolder" allItems={this.state.list} />
+        <ShoppingList className="listHolder"
+        bakery={this.state.bakery}
+        produce={this.state.produce}
+        chilled={this.state.chilled}
+        other={this.state.other} />
       </div>
     )
   }

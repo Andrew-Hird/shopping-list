@@ -23,6 +23,8 @@ export default React.createClass({
           id="new-item"
           name="new-item"
           placeholder="enter item"
+          value={this.props.inputValue}
+          onChange={this.props.onChange}
           ref={function (input) {
             itemInput = input
           }}/>

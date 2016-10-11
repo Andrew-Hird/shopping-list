@@ -4,8 +4,8 @@ import OtherItem from './OtherItem'
 export default React.createClass({
   render() {
     return (
-      <div>
-      <h3>Other:</h3>
+      <div className="cat">
+      <h3>Other</h3>
     <ul>
       {this.props.other.map((other, i) => {
         return <OtherItem

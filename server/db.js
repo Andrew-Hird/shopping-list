@@ -11,6 +11,12 @@ var list = [
   ['prawns', 'milk'],
   ['chips', 'crackers']
 ]
+// var list = [
+//   [],
+//   [],
+//   [],
+//   []
+// ]
 
 function add (item, cb) {
   if(item.cat === 'bakery') {
@@ -22,9 +28,6 @@ function add (item, cb) {
   } else if(item.cat === 'other') {
     list[3].push(item.item)
   }
-
-
-  console.log(list)
   cb()
 }
 

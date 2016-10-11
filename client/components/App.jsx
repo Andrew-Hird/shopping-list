@@ -9,7 +9,7 @@ import NewItem from './NewItem'
 export default React.createClass({
   getInitialState() {
     return {
-      list: [],
+      inputValue: '',
       bakery: [],
       produce: [],
       chilled: [],
@@ -27,8 +27,12 @@ export default React.createClass({
 
   add(item) {
     shoppingapi.add(item, this.getList)
+    this.setState({inputValue: ''})
   },
 
+  onChange (e) {
+    this.setState({ inputValue: e.target.value })
+  },
   renderList(err, list){
     this.setState({
       bakery: list[0],
@@ -42,7 +46,10 @@ export default React.createClass({
     return (
       <div>
         <Header text="What do you want to buy?"/>
-        <NewItem add={this.add}/>
+        <NewItem
+        add={this.add}
+        inputValue={this.state.inputValue}
+        onChange={this.onChange} />
         <ShoppingList className="listHolder"
         bakery={this.state.bakery}
         produce={this.state.produce}

@@ -4,8 +4,8 @@ import ChilledItem from './ChilledItem'
 export default React.createClass({
   render() {
     return (
-      <div>
-      <h3>Chilled:</h3>
+      <div className="cat">
+      <h3>Chilled</h3>
     <ul>
       {this.props.chilled.map((chilled, i) => {
         return <ChilledItem
